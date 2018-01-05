@@ -1,0 +1,168 @@
+.jbh-notification-icon {
+    font-family: 'jbh_icons' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.jbh-notifications {
+    .simple-notification-wrapper simple-notification {
+        position: fixed;
+        width: 320px;
+        z-index: 1000;
+        left: 40%;
+        top: 70px;
+    }
+    .simple-notification {
+        width: 100%;
+        padding: 15px 15px 15px 60px;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-bottom: 10px;
+        color: $white-base;
+        cursor: pointer;
+        transition: all 0.5s;
+        min-height: 101px;
+        border-radius: 6px;
+        -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+    }
+    .simple-notification .sn-title {
+        margin-bottom: 10px;
+        font-family: $font-family-proxima;
+        font-size: 20px;
+        line-height: normal;
+        padding: 0px;
+    }
+    .simple-notification .sn-content {
+        margin: 0;
+        font-size: 12px;
+        font-family: $font-family-proxima;
+        color: $gray-base;
+        font-weight: 600;
+        font-style: normal
+    }
+    .simple-notification .icon {
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        width: 45px;
+        min-height: 100px;
+        height: auto !important;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        padding: 0px;
+    }
+    .simple-notification svg {
+        display: none;
+    }
+    .simple-notification .icon:after {
+        fill: $white-base;
+        line-height: 100px;
+        font-size: 32px;
+        margin-top: 32px;
+        margin-left: 7px;
+    }
+    .simple-notification.rtl-mode {
+        direction: rtl;
+    }
+    .simple-notification.rtl-mode .sn-content {
+        padding: 0 0 0 50px;
+    }
+    .simple-notification.rtl-mode svg {
+        left: 0;
+        right: auto;
+        path {
+            display: none;
+        }
+    }
+    .simple-notification.error {
+        background: #FBECE9;
+        border: 1px solid $red-base;
+        .sn-title {
+            color: $red-base
+        }
+        .icon {
+            background: $red-base;
+        }
+        .icon:after {
+            content: "\e981";
+            @extend .jbh-notification-icon;
+        }
+    }
+    .simple-notification.success {
+        background: #F3F7EB;
+        border: 1px solid $green-base;
+        .sn-title {
+            color: $green-base
+        }
+        .icon {
+            background: $green-base
+        }
+        .icon:after {
+            content: "\e91d";
+            @extend .jbh-notification-icon;
+        }
+    }
+    .simple-notification.alert {
+        background: #FCF3EA;
+        border: 1px solid $tan-base;
+        .sn-title {
+            color: $tan-base
+        }
+        .icon {
+            background: $tan-base;
+        }
+        .icon:after {
+            content: "\e969";
+            @extend .jbh-notification-icon;
+        }
+    }
+    .simple-notification.info {
+        background: #D1EAFF;
+        border: 1px solid $blue-lighter;
+        .sn-title {
+            color: $blue-lighter
+        }
+        .icon {
+            background: $blue-lighter;
+        }
+        .icon:after {
+            content: "\e91e";
+            @extend .jbh-notification-icon;
+        }
+    }
+    .simple-notification .sn-progress-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+    }
+    .simple-notification .sn-progress-loader span {
+        float: left;
+        height: 100%;
+    }
+    .simple-notification.success .sn-progress-loader span {
+        background: #D3452B;
+    }
+    .simple-notification.error .sn-progress-loader span {
+        background: #0066cc !important;
+    }
+    .simple-notification.alert .sn-progress-loader span {
+        background: #edc242;
+    }
+    .simple-notification.info .sn-progress-loader span {
+        background: #0288D1;
+    }
+    .simple-notification.bare .sn-progress-loader span {
+        background: #ccc;
+    }
+}

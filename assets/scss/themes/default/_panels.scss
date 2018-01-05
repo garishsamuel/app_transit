@@ -1,0 +1,257 @@
+//
+// Panels
+// --------------------------------------------------
+// Base class
+.jbh-panel-accordion {
+    .panel {
+        border: none !important;
+        background-color: transparent !important;
+        .panel-heading {
+            border-radius: 0px !important;
+            padding: $panel-accordion-heading-padding;
+            border-bottom: 1px solid transparent;
+            background-color: $brand-primary !important;
+            color: $white-base;
+            font-family: $font-family-proxima;
+            font-size: 16px;
+            font-weight: bold;
+            -webkit-box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 1px 6px 3px rgba(0, 0, 0, 0.3);
+            > .dropdown .dropdown-toggle {
+                color: inherit;
+            }
+        }
+        .panel-body {
+            padding: 0px !important;
+            border: none !important;
+            background-color: transparent !important;
+            @include clearfix;
+            .panel-heading {
+                background-color: transparent !important;
+            }
+            .jbh-accordion-inner {
+                border-radius: 6px;
+                -webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+                box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.3);
+                background-color: $white-base !important;
+            }
+            .jbh-accordion-gray {
+                border-radius: 0px;
+                background-color: $gray !important;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+.panel-group .panel + .panel {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: none;
+}
+// panel with gray heading bg
+.jbh-panel-gray {
+    .panel {
+        margin-bottom: 0px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        .panel-heading {
+            background-color: $gray-light;
+            border-radius: 0px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .panel-title {
+                font-size: 16px;
+                color: $gray-base;
+                i {
+                    font-size: 12px
+                }
+            }
+        }
+        .panel-body {
+            padding: 10px;
+            font-size: 12px;
+            background-color: $white-base;
+            border: 1px solid $gray-light;
+        }
+    }
+}
+// panel with gray heading bg
+.jbh-panel-list {
+    .panel {
+        margin-bottom: 0px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        .panel-heading {
+            background-color: $gray-light !important;
+            border-radius: 0px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            box-shadow: 1px 2px 6px 0px $gray;
+            color: $gray-base !important;
+            .panel-title, .panel-title span {
+                font-size: 14px !important;
+                color: $gray-base !important;
+                i {
+                    font-size: 12px
+                }
+            }
+        }
+        .panel-body {
+            label {
+                font-size: 12px !important;
+                padding-bottom: 10px;
+            }
+            padding:10px;
+            ul {
+                li {
+                    list-style-type: disc;
+                    list-style: $gray-base;
+                    list-style-position: inside;
+                    padding: 12px 10px;
+                    border-bottom: 1px solid $gray-light;
+                    font-size: 16px;
+                    ul {
+                        padding-left: 20px;
+                        li {
+                            font-size: 14px;
+                            list-style: $gray;
+                            list-style-position: inside;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// panel with dark heading bg
+.jbh-panel-default {
+    @extend .jbh-panel-accordion;
+    .panel {
+        margin-bottom: 0px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        .panel-heading {
+            background-color: $blue-darker;
+            border-radius: 0px;
+            i {
+                font-size: 12px;
+                margin-top: -5px;
+                position: absolute;
+                z-index: 999999;
+                top: 20px;
+            }
+            .panel-title {
+                font-size: 16px;
+                i {
+                    font-size: 12px
+                }
+            }
+        }
+        .panel-body {
+            padding: 0px;
+            background-color: $white-base;
+        }
+    }
+}
+.panel-darkbg {
+    background: $blue-darker;
+    label {
+        color: $white-base;
+    }
+    color:$white-base;
+}
+.bubble-layer {
+    background: $blue-base-opacity;
+    border-radius: 6px;
+    color: $gray-base;
+    min-height: 50px;
+    top: 0px;
+    position: relative;
+    border: 1px solid $blue-base-opacity;
+    &:hover, &:active {
+        background-color: $blue-light;
+        :before {
+            background: $blue-base-opacity;
+        }
+    }
+    &:hover +:before {
+        background: $blue-base-opacity;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 100%;
+        left: 30px;
+        height: 20px;
+        z-index: -1;
+        width: 20px;
+        background: $blue-base-opacity;
+        box-sizing: border-box;
+        transform: rotate(45deg) translate(-50%);
+        border-bottom: inherit;
+        border-right: inherit;
+        box-shadow: inherit;
+    }
+}
+.list-layer {
+    background: $white-base;
+    color: $gray-base;
+    min-height: 50px;
+    top: 0px;
+    position: relative;
+    border: 1px solid $white-base;
+    &:hover {
+        background-color: $blue-light;
+    }
+    &:active {
+        background-color: $blue-light;
+        border: 1px solid $blue-lighter;
+    }
+}
+// Panel with split screen
+.jbh-panel-split {
+    .panel {
+        margin-bottom: 0px;
+        background-color: transparent;
+        border: none;
+        border-radius: 6px;
+        -webkit-box-shadow: 3px 6px 20px -5px #939393;
+        -moz-box-shadow: 3px 6px 20px -5px #939393;
+        box-shadow: 3px 6px 20px -5px #939393;
+        .panel-heading, .panel-footer, .panel-body {
+            background: #fff;
+        }
+        .panel-heading {
+            border-bottom: 1px solid #e3e3e3;
+            padding: 5px 15px;
+        }
+    }
+}
+// Contextual variations
+.panel-default {
+    @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
+}
+.panel-primary {
+    @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+}
+.panel-success {
+    @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+}
+.panel-info {
+    @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+}
+.panel-warning {
+    @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+}
+.panel-danger {
+    @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
+}
