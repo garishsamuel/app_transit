@@ -1,0 +1,48 @@
+.tab-custom-nav{
+  width:100%;
+ .nav-tabs {
+  background-color: #fff;
+  border: none;
+  width:100%;
+  > li {
+    float: left;
+    margin-bottom: -1px;
+    border-radius:0px;
+    > a {
+      line-height: 2.5em;
+      margin: 0px 5px;
+      padding-left:10px;
+      padding-right:10px;
+      border: none;
+      border-radius: 0px;
+      &:hover {
+        border-color: #006699;
+        background-color:#fff;
+      }
+      .icon
+      {
+            font-size: 24px;
+            color:#999;
+      }
+    }
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: #236093;
+        background-color: #fff;
+        border: none;
+        border-bottom-color: transparent;
+        cursor: default;
+      }
+    .icon
+      {
+            color:#00345D;
+      }
+
+    }
+  }
+
+
+}
+}

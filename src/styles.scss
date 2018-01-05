@@ -1,0 +1,246 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Import Custom Icons
+@import "assets/scss/icons/font-awesome-4.7.0";
+// Import Custom Bootstrap
+@import "assets/scss/bootstrap";
+// Import Default Theme
+@import "assets/scss/themes/default/variables";
+// Import mixins
+@import "assets/scss/themes/default/mixins/buttons";
+@import "assets/scss/themes/default/buttons";
+@import "assets/scss/themes/default/navs";
+@import "assets/scss/themes/default/dropdowns";
+@import "assets/scss/themes/default/panels";
+@import "assets/scss/themes/default/mixins/forms";
+@import "assets/scss/themes/default/forms";
+@import "assets/scss/themes/default/_notifications";
+@import "assets/scss/themes/default/_date";
+@import "assets/scss/themes/default/_popovers";
+
+body {
+    padding-top: 40px;
+    font-size: 12px;
+    line-height: 15px;
+    font-kerning: 30px;
+    font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-proxima;
+}
+h1,
+h1.panel-title {
+    font-kerning: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase
+}
+h2,
+h2.panel-title {
+    font-kerning: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase
+}
+h3,
+h3.panel-title {
+    font-kerning: 30px;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: none;
+}
+h4,
+h4.panel-title {
+    font-kerning: 30px;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: none;
+}
+h4.modal-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #444444;
+}
+.noMarginStyle {
+    margin: 0px;
+}
+.right-text {
+    text-align: right;
+}
+.inline-block {
+    display: inline-block !important;
+}
+.nopadding {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.pad0 {
+    padding: 0 !important;
+}
+.pad10 {
+    padding: 10px !important;
+}
+.pad20 {
+    padding: 20px !important;
+}
+.pad-top0 {
+    padding-top: 0px !important;
+}
+.pad-top5 {
+    padding-top: 5px !important;
+}
+.pad-top10 {
+    padding-top: 10px !important;
+}
+.pad-top15 {
+    padding-top: 15px !important;
+}
+.pad-top20 {
+    padding-top: 20px !important;
+}
+.pad-top25 {
+    padding-top: 25px !important;
+}
+.pad-left0 {
+    padding-left: 0 !important;
+}
+.pad-left5 {
+    padding-left: 5px !important;
+}
+.pad-left3 {
+    padding-left: 3px !important;
+}
+.pad-left10 {
+    padding-left: 10px !important;
+}
+.pad-left16 {
+    padding-left: 16px !important;
+}
+.pad-left20 {
+    padding-left: 20px !important;
+}
+.pad-left25 {
+    padding-left: 25px !important;
+}
+.pad-left30 {
+    padding-left: 30px !important;
+}
+.pad-right0 {
+    padding-right: 0 !important;
+}
+.pad-right10 {
+    padding-right: 10px !important;
+}
+.pad-right20 {
+    padding-right: 20px !important;
+}
+.pad-bot5 {
+    padding-bottom: 5px !important;
+}
+.pad-bot10 {
+    padding-bottom: 10px !important;
+}
+.pad-bot15 {
+    padding-bottom: 15px !important;
+}
+.pad-bot20 {
+    padding-bottom: 20px !important;
+}
+.pad-bot30 {
+    padding-bottom: 30px !important;
+}
+.mar10 {
+    margin: 10px !important;
+}
+.mar20 {
+    margin: 20px !important;
+}
+.mar-top5 {
+    margin-top: 5px !important;
+}
+.mar-top10 {
+    margin-top: 10px !important;
+}
+.mar-top15 {
+    margin-top: 15px !important;
+}
+.mar-top20 {
+    margin-top: 20px !important;
+}
+.mar-top30 {
+    margin-top: 30px !important;
+}
+.mar-left10 {
+    margin-left: 10px !important;
+}
+.mar-left20 {
+    margin-left: 20px !important;
+}
+.mar-left30 {
+    margin-left: 30px !important;
+}
+.mar-bot0 {
+    margin-bottom: 0 !important;
+}
+.mar-bot6 {
+    margin-bottom: 6px !important;
+}
+.mar-bot10 {
+    margin-bottom: 10px !important;
+}
+.mar-bot20 {
+    margin-bottom: 20px !important;
+}
+.martop10{
+    margin-top: 10px;
+} 
+.border-top {
+    border-top: 1px solid $gray !important;
+}
+.noborder {
+    border: none !important;
+}
+.border-right-none {
+    border-right: 0 !important;
+}
+.border-left-none {
+    border-left: 0 !important;
+}
+.rounded-edges-leftBtn {
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+.rounded-edges-rightBtn {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.rounded-edges-top {
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+.align-top {
+    vertical-align: top;
+}
+.align-baseline {
+    vertical-align: baseline;
+}
+.align-middle-baseline {
+    vertical-align: -webkit-baseline-middle;
+}
+.align-super {
+    vertical-align: super;
+}
+.align-sub {
+    vertical-align: sub;
+}
+.panelshadow {
+    box-shadow: -3px 3px 15px #C9C9C9;
+}

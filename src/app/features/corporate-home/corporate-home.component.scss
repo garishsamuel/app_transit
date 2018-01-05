@@ -1,0 +1,14 @@
+.homeHeader {
+    border-bottom: 1px solid #ddd;
+    i {
+        font-size: 20px;
+    }
+    i:not(:first-of-type) {
+        padding-left: 5px;
+    }
+    .homeTitle {
+        margin: 0px;
+        padding-left: 10px;
+        display: inline-block;
+    }
+}

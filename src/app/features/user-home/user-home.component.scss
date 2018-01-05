@@ -1,0 +1,40 @@
+.homeHeader {
+    border-bottom: 1px solid #ddd;
+    i {
+        font-size: 20px;
+    }
+    i:not(:first-of-type) {
+        padding-left: 5px;
+    }
+    .homeTitle {
+        margin: 0px;
+        padding-left: 10px;
+        display: inline-block;
+    }
+}
+.tabHeader {
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    .tabItem {
+        padding: 10px 5px;
+        border-right: 1px solid #ddd;
+    }
+    .tabItem:last-of-type {
+        border-right: 0px;
+    }
+    span.selected {
+        background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+        color: #ffffff;
+    }
+}
+.userContainer {
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+.userHomePanel {
+    img {
+        width: 40%;
+    }
+    img:nth-of-type(1) {
+        text-align: right;
+    }
+}

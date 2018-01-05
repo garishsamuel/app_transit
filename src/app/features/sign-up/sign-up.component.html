@@ -1,0 +1,80 @@
+
+<div class="row">
+    <div class="col-xs-12">
+        <h2 class="pad10">Sign Up</h2>
+        <form id="signUpForm" class="pad10" [formGroup]="signUpForm">
+            <div>
+                <label for="firstName" #firstName>First Name</label>
+                <input type="text" class="form-control" name="firstName" required />
+                <div *ngIf ="signUpForm.get('firstName').hasError('required') && signUpForm.get('firstName').touched">Username is required</div>
+            </div>
+            <div>
+                <label for="lastName" #lastName>Last Name</label>
+                <input type="text" class="form-control" name="lastName" required />
+                <div *ngIf ="signUpForm.get('lastName').hasError('required') && signUpForm.get('lastName').touched">Username is required</div>
+            </div>
+            <div>
+                <label for="SSN" #SSN>SSN</label>
+                <input type="text" class="form-control" name="SSN" required />
+                <div *ngIf ="signUpForm.get('SSN').hasError('required') && signUpForm.get('SSN').touched">Username is required</div>
+            </div>
+            <div>
+                <label for="address" #address>address</label>
+                <input type="text" class="form-control" name="address" required />
+                <div *ngIf ="signUpForm.get('address').hasError('required') && signUpForm.get('address').touched">Username is required</div>
+            </div>
+            <div>
+                <label for="mobile" #mobile>Mobile</label>
+                <input type="text" class="form-control" name="mobile" required />
+                <div *ngIf ="signUpForm.get('mobile').hasError('required') && signUpForm.get('mobile').touched">Username is required</div>
+            </div>
+            <div>
+                <label for="email" #email>E-Mail</label>
+                <input type="text" class="form-control" name="email" required />
+                <div *ngIf ="signUpForm.get('email').hasError('required') && signUpForm.get('email').touched">Username is required</div>
+            </div>
+            <div>
+                <label for="type" #type>Type:</label>
+                <input name="type" type="radio" formControlName="type" value="Owner" (change)="isSelected($event)" [checked] ='true'>Owner
+                <input name="type"  type="radio" formControlName="type"  value="Traveller" (change)="isSelected($event)"  >Traveller<br/>
+            </div>
+            <div *ngIf="radVal == 'owner'">
+                <div>
+                    <label for="onwerVehicle" #ownerVehicle>Vehicle</label>
+                    <input type="text" class="form-control" name="ownerVehicle" required />
+                    <div *ngIf ="signUpForm.get('ownerVehicle').hasError('required') && signUpForm.get('ownerVehicle').touched">Username is required</div>
+                </div>
+                <div>
+                    <label for="registration" #registration>Registration</label>
+                    <input type="text" class="form-control" name="registration" required />
+                    <div *ngIf ="signUpForm.get('registration').hasError('required') && signUpForm.get('registration').touched">Username is required</div>
+                </div>
+                <div>
+                    <label for="bootspace" #bootspace>Bootspace</label>
+                    <input type="text" class="form-control" name="bootspace" required />
+                    <div *ngIf ="signUpForm.get('bootspace').hasError('required') && signUpForm.get('bootspace').touched">Username is required</div>
+                </div>
+            </div>
+
+            <div *ngIf="radVal == 'traveller'">
+              <h4>Preferred</h4>
+                <div>
+                    <label for="route" #route>route</label>
+                    <input type="text" class="form-control" name="route" required />
+                    <div *ngIf ="signUpForm.get('route').hasError('required') && signUpForm.get('route').touched">Username is required</div>
+                </div>
+                <div>
+                    <label for="Mode" #Mode>Mode</label>
+                    <input type="text" class="form-control" name="Mode" required />
+                    <div *ngIf ="signUpForm.get('Mode').hasError('required') && signUpForm.get('Mode').touched">Username is required</div>
+                </div>
+            </div>
+           
+   
+            <div class="martop10">
+                <button class="btn btn-primary">Register</button>
+                <button class="btn btn-secondary">Cancel</button>
+            </div>
+        </form>
+      </div>
+</div>

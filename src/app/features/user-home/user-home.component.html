@@ -1,0 +1,60 @@
+<div class="row homeHeader">
+	<div class="col-xs-12">
+		<div class="pad10">
+			<i class="fa fa-home" (click)="onHomeClick($event)"></i>
+			<i class="fa fa-bars"></i>
+			<h3 class="homeTitle">{{homeTitle}}</h3>
+		</div>
+	</div>
+</div>
+<div class="row tabHeader">
+	<div class="col-xs-12">
+		<div class="">
+			<span class="pull-left tabItem" (click)="onTourPlannerClick($event)"
+				[class.selected]="homeTitle === 'Tour Planner'"
+			>
+				Planner
+			</span>
+			<span class="pull-left tabItem" (click)="onFutureTravelsClick($event)"
+				[class.selected]="homeTitle === 'Future Travels'"
+			>
+				Future Travels
+			</span>
+			<span class="pull-left tabItem" (click)="onParcelsDeliveredClick($event)"
+				[class.selected]="homeTitle === 'Parcels Delivered'"
+			>
+				Parcels Delivered
+			</span>
+			<span class="pull-left tabItem" (click)="onParcelsAvailableClick($event)"
+				[class.selected]="homeTitle === 'Parcels Available'"
+			>
+				Parcels Available
+			</span>
+		</div>
+	</div>
+</div>
+<div class="row userContainer" *ngIf="homeTitle === 'Home'">
+	<div class="col-xs-12">
+		<div class="row userHomePanel">
+			<div class="col-xs-12">
+				<img src="assets/images/home-image1.png">
+			</div>
+		</div>
+		<div class="row userHomePanel right-text">
+			<div class="col-xs-12">
+				<img src="assets/images/home-image3.png">
+			</div>
+		</div>
+		<div class="row userHomePanel">
+			<div class="col-xs-12">
+				<img src="assets/images/home-image2.png">
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<router-outlet></router-outlet>
+	</div>
+</div>
+

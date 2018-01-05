@@ -1,0 +1,32 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default travelListPanel">
+			<div class="panel-body fixed-panel">
+				<div class="row travelItem" *ngFor="let travel of futureTravelsList;">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-6">
+								From: {{travel.from}}
+							</div>
+							<div class="col-xs-6">
+								To: {{travel.to}}
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								Date: {{travel.travelDate}}
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<button class="btn btn-danger">
+									Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

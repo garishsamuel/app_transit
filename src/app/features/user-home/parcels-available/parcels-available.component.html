@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default travelListPanel">
+			<div class="panel-body fixed-panel">
+				<div class="row travelItem" *ngFor="let item of deliveredDetails; let i = index">
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-4">
+								<img class="parcelPics" src="assets/images/box1.png">
+							</div>
+							<div class="col-xs-8">
+								<span>Amount</span> : {{item.Amount}}<br>
+								<span>Travel Date</span> : {{item.travelDate}} <br>
+								<span>From</span> : {{item.from}}<br>
+								<span>To</span> : {{item.to}}<br>
+								<span>Dimensions</span> : {{item.Dimensions}}(Inches)<br>
+								<span>Amount</span> : {{item.Amount}}<br>
+							</div>
+						</div>
+						<div class="row pad-top10">
+							<div class="col-xs-12">
+								<input type="checkbox"> Doorstep Delivery
+								<button class="btn btn-success">
+									Accept
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+.parcelPics {
+    width: 100%;
+}
+.travelListPanel {
+    margin: 10px;
+    .travelItem {
+        padding: 10px 0px;
+        border-bottom: 1px solid #ddd;
+    }
+    .travelItem:first-of-type {
+        padding: 0px 0px 10px 0px;
+    }
+    .travelItem:last-of-type {
+        border-bottom: 0px;
+        padding: 10px 0px 0px 0px;
+    }
+}

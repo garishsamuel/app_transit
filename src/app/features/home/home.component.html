@@ -1,0 +1,51 @@
+<div class="row pad10">
+	<div class="col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-sm-12">
+						<h4 class="noMarginStyle">Login</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-body fixed-panel">
+				<form [formGroup]="loginForm">
+					<div class="row paddingTopBottom">
+						<div class="col-sm-12 float-label">
+							<input #userName type="text" class="form-control" id="userName" placeholder="User Name"
+									formControlName="userName">
+							<label for="userName">User Name</label>
+						</div>
+					</div>
+					<div class="row paddingTopBottom">
+						<div class="col-sm-12 float-label">
+							<input #password type="password" class="form-control" id="password" placeholder="Password"
+									formControlName="password">
+							<label for="scacCode">Password</label>
+						</div>
+					</div>
+					<div class="row">
+							<div class="col-sm-12 right-text">
+								<a (click)="onForgotPasswordClick($event)">
+									Forgot Password
+								</a>
+							</div>
+						</div>
+				</form>
+			</div>
+			<div class="panel-footer">
+				<div class="row">
+					<div class="col-sm-12">
+						<button class="btn" (click)="onLoginClick($event)">
+							Login
+						</button>
+						<button class="btn" (click)="onSignUpClick($event)">
+							Sign Up
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
