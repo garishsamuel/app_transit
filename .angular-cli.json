@@ -11,6 +11,7 @@
         "assets",
         "images",
         "api",
+		"app_transit",
         "favicon.ico"
       ],
       "index": "index.html",
