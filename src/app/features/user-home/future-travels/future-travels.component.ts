@@ -17,7 +17,7 @@ export class FutureTravelsComponent implements OnInit {
 	}
 
 	private loadTravelList (): void {
-		this.apiClientService.getData('/api/FutureTravels.json').subscribe( data => {
+		this.apiClientService.getData('/app_transit/api/FutureTravels.json').subscribe( data => {
 			this.futureTravelsList = data;
 		});
 	}

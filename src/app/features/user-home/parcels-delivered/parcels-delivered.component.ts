@@ -15,7 +15,7 @@ export class ParcelsDeliveredComponent implements OnInit {
     this.loadTravelList();
   }
   loadTravelList (): void {
-		this.apiClientService.getData('/api/parcelsDelivered.json').subscribe( data => {
+		this.apiClientService.getData('/app_transit/api/parcelsDelivered.json').subscribe( data => {
       this.deliveredDetails = data;
 		});
 	}

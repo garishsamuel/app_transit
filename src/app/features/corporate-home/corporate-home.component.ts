@@ -27,7 +27,7 @@ export class CorporateHomeComponent implements OnInit {
 		}
 	}
 	loadTravelList (): void {
-		this.apiClientService.getData('/api/status.json').subscribe( data => {
+		this.apiClientService.getData('/app_transit/api/status.json').subscribe( data => {
 			this.deliveredDetails = data;
 		});
 	}
