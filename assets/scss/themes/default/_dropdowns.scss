@@ -1,0 +1,91 @@
+.dropdown-menu {
+    .arrow.bottom-right {
+        bottom: -7px;
+        right: 5px;
+        position: absolute;
+        border-top: solid 7px #999;
+        border-left: solid 7px transparent;
+        border-right: solid 7px transparent;
+    }
+    .arrow.bottom-right:after {
+        bottom: 1px;
+        content: "";
+        right: -7px;
+        position: absolute;
+        border-top: solid 7px #fff;
+        border-left: solid 7px transparent;
+        border-right: solid 7px transparent;
+    }
+    .arrow.top-right {
+        top: -7px;
+        right: 5px;
+        position: absolute;
+        border-bottom: solid 7px #999;
+        border-left: solid 7px transparent;
+        border-right: solid 7px transparent;
+    }
+    .arrow.top-right:after {
+        top: 1px;
+        content: "";
+        right: -7px;
+        position: absolute;
+        border-bottom: solid 7px #fff;
+        border-left: solid 7px transparent;
+        border-right: solid 7px transparent;
+    }
+}
+.select-downArrow {
+    font-size: 16px;
+    color: #444444;
+    position: absolute;
+    right: 29px;
+    top: 12px;
+    cursor: default;
+    pointer-events: none;
+}
+input.dropdown:hover ~.select-downArrow {
+    color: #5FA8E6;
+}
+input.dropdown:hover {
+    border: #5FA8E6;
+    color: #939393;
+}
+ul.select {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 287px;
+    border: #C9C9C9 solid 1px;
+    display: none;
+}
+ul.select li {
+    padding: 10px;
+    list-style-type: none;
+}
+ul.select li:hover {
+    color: #444444;
+    background-color: #E3E3E3;
+}
+ul.select li:active {
+    color: #236093;
+    background-color: #D1EAFF;
+}
+input.dropdown:focus ~ul.select {
+    display: block;
+}
+input.dropdown:focus ~.select-downArrow {
+    color: #5FA8E6;
+}
+.open > .dropdown-menu {
+    font-size: 12px;
+    font-family:$font-family-helvetica-roman !important;
+    padding: 12px 0px;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: #333333;
+    white-space: normal;
+}

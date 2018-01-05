@@ -1,0 +1,19 @@
+[{
+    "travelDate": "01/10/2018",
+    "from": "New York",
+    "to": "New Jersey",
+    "Dimensions": "20*12*23",
+    "Amount":"$200"
+}, {
+    "travelDate": "01/12/2018",
+    "from": "New Jersey",
+    "to": "Washington",
+    "Dimensions": "30*14*13",
+    "Amount":"$100"
+}, {
+    "travelDate": "01/14/2018",
+    "from": "Washington",
+    "to": "New York",
+    "Dimensions": "25*11*12",
+    "Amount":"$150"
+}]
