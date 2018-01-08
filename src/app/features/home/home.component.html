@@ -1,41 +1,68 @@
 <div class="row pad10">
-	<div class="col-sm-12">
+	<div class="col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-xs-12">
 						<h4 class="noMarginStyle">Login</h4>
 					</div>
 				</div>
 			</div>
 			<div class="panel-body fixed-panel">
 				<form [formGroup]="loginForm">
-					<div class="row paddingTopBottom">
-						<div class="col-sm-12 float-label">
-							<input #userName type="text" class="form-control" id="userName" placeholder="User Name"
-									formControlName="userName">
-							<label for="userName">User Name</label>
+					<div class="row errorStyle" *ngIf="isError">
+						<div class="col-xs-12">
+							{{errorMessage}}
 						</div>
 					</div>
 					<div class="row paddingTopBottom">
-						<div class="col-sm-12 float-label">
+						<div class="col-xs-12 float-label jbhNoMarginForError">
+							<app-validator-message [control]="loginForm.controls.userName" [label]="'User Name'">
+							</app-validator-message>
+							<input #userName type="text" class="form-control" id="userName" placeholder="User Name"
+									formControlName="userName">
+							<label for="userName" *ngIf="loginForm.get('userName').valid || !loginForm.get('userName').touched">
+								User Name
+							</label>
+						</div>
+					</div>
+					<div class="row paddingTopBottom">
+						<div class="col-xs-12 float-label jbhNoMarginForError">
+							<app-validator-message [control]="loginForm.controls.password" [label]="'Password'">
+							</app-validator-message>
 							<input #password type="password" class="form-control" id="password" placeholder="Password"
 									formControlName="password">
-							<label for="scacCode">Password</label>
+							<label for="scacCode" *ngIf="loginForm.get('password').valid || !loginForm.get('password').touched">
+								Password
+							</label>
 						</div>
 					</div>
 					<div class="row">
-							<div class="col-sm-12 right-text">
-								<a (click)="onForgotPasswordClick($event)">
-									Forgot Password
-								</a>
+						<div class="col-xs-12 right-text">
+							<a (click)="onForgotPasswordClick($event)">
+								Forgot Password
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="radio inline-block">
+								<input type="radio" id="customerUser" name="userType" formControlName="userType" value="customer"/>
+								<label></label>
+								<span class="margininp">Customer</span>
+							</div>
+							<div class="radio inline-block">
+								<input type="radio" id="adminUser" name="userType" formControlName="userType" value="admin"/>
+								<label></label>
+								<span class="margininp">Admin</span>
 							</div>
 						</div>
+					</div>
 				</form>
 			</div>
 			<div class="panel-footer">
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-xs-12">
 						<button class="btn" (click)="onLoginClick($event)">
 							Login
 						</button>

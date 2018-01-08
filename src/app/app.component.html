@@ -1,5 +1,24 @@
-<div class="headerStyle">
-	Transit
+<div class="row">
+	<div class="col-xs-12">
+		<div class="headerStyle">
+			Transit
+			<span class="pull-right" *ngIf="userName">
+				<span dropdown placement="bottom right">
+					<i class="fa fa-user-circle">
+
+					</i>
+					{{userName}}
+					<ul *dropdownMenu class="dropdown-menu">
+						<li role="menuitem">
+							<a class="dropdown-item"(click)="logoutClick($event)">
+								Logout
+							</a>
+						</li>
+					</ul>
+				</span>
+			</span>
+		</div>
+	</div>
 </div>
 <div class="row">
 	<div class="col-xs-12">

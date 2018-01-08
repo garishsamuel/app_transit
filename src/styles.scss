@@ -19,7 +19,6 @@
 @import "assets/scss/themes/default/_popovers";
 
 body {
-    padding-top: 40px;
     font-size: 12px;
     line-height: 15px;
     font-kerning: 30px;
@@ -243,4 +242,16 @@ h4.modal-title {
 }
 .panelshadow {
     box-shadow: -3px 3px 15px #C9C9C9;
+}
+.jbhNoMarginForError{
+    /deep/ app-validator-message div{        
+        margin:0px !important;
+    }
+    /deep/ .customErrorMSGStyle, /deep/ app-validator-message div{
+        position: absolute;
+        top: -20px;
+    }
+    .spanNoBorderRight{
+        border-right: none !important;
+    }
 }
