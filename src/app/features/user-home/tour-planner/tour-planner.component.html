@@ -1,36 +1,59 @@
 <div class="row pad10">
     <div class="col-xs-12">
-        <form id="tourPlannerForm" [formGroup] ="tourPlannerForm">
-            <div class="row">
-                <div class="col-xs-12">
-                <label for="from">From:</label>
-                <input #from class="form-control" type="text" class="form-control" name="from" id="from" required />
-              </div>
+        <div class="panel panel-default">
+            <div class="panel-body fixed-panel">
+                <form id="tourPlannerForm" [formGroup] ="tourPlannerForm">
+                    <div class="row pad-top15">
+                        <div class="col-xs-12 float-label jbhNoMarginForError">
+                            <app-validator-message [control]="tourPlannerForm.controls.from" [label]="'From'">
+                            </app-validator-message>
+                            <input #from type="text" class="form-control" formControlName="from" id="from" placeholder="From" required />
+                            <label for="from" *ngIf="tourPlannerForm.get('from').valid || !tourPlannerForm.get('from').touched">
+                                From
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row pad-top25">
+                        <div class="col-xs-12 float-label jbhNoMarginForError">
+                            <app-validator-message [control]="tourPlannerForm.controls.to" [label]="'To'">
+                            </app-validator-message>
+                            <input #to type="text" class="form-control" formControlName="to" id="to" placeholder="To" required />
+                            <label for="to" *ngIf="tourPlannerForm.get('to').valid || !tourPlannerForm.get('to').touched">
+                                To
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row pad-top25">
+                        <div class="col-xs-12 float-label jbhNoMarginForError">
+                            <app-validator-message [control]="tourPlannerForm.controls.modeOfTravel" [label]="'Mode of Travel'">
+                            </app-validator-message>
+                            <input #modeOfTravel type="text" class="form-control" formControlName="modeOfTravel" id="modeOfTravel" placeholder="Mode of Travel" required />
+                            <label for="modeOfTravel" *ngIf="tourPlannerForm.get('modeOfTravel').valid || !tourPlannerForm.get('modeOfTravel').touched">
+                                Mode of Travel
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row pad-top25">
+                        <div class="col-xs-12 float-label jbhNoMarginForError">
+                            <app-validator-message [control]="tourPlannerForm.controls.dateOfJourney" [label]="'Date of Journey'">
+                            </app-validator-message>
+                            <input #dateOfJourney type="date" class="form-control" formControlName="dateOfJourney" id="dateOfJourney" placeholder="Date of Journey" required />
+                            <label for="dateOfJourney" *ngIf="tourPlannerForm.get('dateOfJourney').valid || !tourPlannerForm.get('dateOfJourney').touched">
+                                Date of Journey
+                            </label>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="row pad-top10">
-                <div class="col-xs-12">
-                <label>To:</label>
-                <input class="form-control" type="text" class="form-control" name="to" required />
-              </div>
+            <div class="panel-footer">
+                <div class="row pad-top10">
+                    <div class="col-xs-12">
+                        <button class="btn btn-success">Plan</button>
+                        <button class="btn btn-danger">Cancel</button>
+                    </div>
+                </div>
             </div>
-            <div class="row pad-top10">
-                <div class="col-xs-12">
-                <label>Mode of travel:</label>
-                <input class="form-control" type="text" class="form-control" name="modeOfTravel" required />
-              </div>
-            </div>
-            <div class="row pad-top10">
-                <div class="col-xs-12">
-                <label>Date of Journey:</label>
-                <input class="form-control" type="date" class="form-control" name="dateOfJourney" required />
-              </div>
-            </div>
-            <div class="row pad-top10">
-                <div class="col-xs-12">
-                  <button class="btn btn-success">Plan</button>
-                  <button class="btn btn-danger">Cancel</button>
-              </div>
-            </div>
-        </form>
+        </div>
+        
     </div>
 </div>

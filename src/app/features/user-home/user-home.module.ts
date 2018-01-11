@@ -9,13 +9,15 @@ import { ApiClientService } from './services/api-client.service';
 import { TourPlannerComponent } from './tour-planner/tour-planner.component';
 import { ParcelsDeliveredComponent } from './parcels-delivered/parcels-delivered.component';
 import { ParcelsAvailableComponent } from './parcels-available/parcels-available.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
 	imports: [
 		CommonModule,
 		FormsModule,
 		ReactiveFormsModule,
-		UserHomeRoutingModule
+		UserHomeRoutingModule,
+		SharedModule
 	],
 	declarations: [
 		UserHomeComponent,

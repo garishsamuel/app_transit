@@ -13,7 +13,7 @@
     }
 }
 .tabHeader {
-    border-bottom: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
     font-weight: bold;
     .tabItem {
         padding: 10px 5px;
@@ -37,4 +37,8 @@
     img:nth-of-type(1) {
         text-align: right;
     }
+}
+.userHomeRouterPanel {
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    height: calc(100vh - 100px);
 }

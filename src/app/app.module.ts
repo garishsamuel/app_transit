@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
@@ -16,6 +17,7 @@ import { ApiClientService } from './shared/app-services/api-client.service';
 	],
 	imports: [
 		BrowserModule,
+		BrowserAnimationsModule,
 		HttpModule,
 		AppRoutingModule,
 		SharedModule,
